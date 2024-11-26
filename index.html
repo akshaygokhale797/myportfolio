@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
-  <title>Akshay Gokhale's Personal Portfolio</title>
+  <title>Akshay's Portfolio</title>
   <style>
     body {
       font-family: 'Lexend', sans-serif;
@@ -110,6 +110,20 @@
       height: 15px;
       border-radius: 5px;
     }
+  
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -124,105 +138,124 @@
     </div>
   </header>
 
-  <div id="content" class="container" style="display: flex; gap: 20px;">
-    <div id="left-panel" style="width: 25%; padding: 20px; display: flex; flex-direction: column; gap: 20px;">
-      <div class="box" style="margin-bottom: 10px;">
-        <h2 style="font-size: 1.5em;">Education</h2>
-        <p style="font-size: 1em;"><strong>University of Wisconsin - Madison</strong></p>
-        <p style="margin-left: 20px; font-size: 0.9em;"><strong>BS Information Science</strong></p>
-        <p style="margin-left: 20px; font-size: 0.9em;"><em>Minor in Computer Science</em></p>
-      </div>
-      <div class="box" style="margin-top: 10px;">
-        <h2 style="font-size: 1.5em;">Skills</h2>
-        <ul style="font-size: 1em; list-style-type: disc; padding-left: 20px; margin: 0;">
-          <li><strong>Developer Tools:</strong> VS Code, Eclipse, Google Cloud Platform, Microsoft Office, APIs, Tableau</li>
-          <li><strong>Technologies/Frameworks:</strong> Linux, GitHub, JUnit, Nightwatch, Node.js, Jupyter, Pandas, NumPy</li>
-          <li><strong>CAD Software:</strong> Solidworks</li>
+  <div id="content" class="container" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+    <div class="box fade-in section-panel" id="about" style="width: 80%;">
+      <h2>About Me</h2>
+      <p>Hi! I'm Akshay, a software engineer passionate about building creative solutions, whether they are web applications, machine learning models, or something entirely new! My journey began in Mechanical Engineering and pivoted into Computer Science, driven by my fascination with technology and its potential to impact the world.</p>
+    </div>
+    <div class="box fade-in section-panel" id="work-experience" style="width: 80%;">
+      <h2>Work Experience</h2>
+      <div class="job">
+        <h3>KX - Vector Database & Analytics Engine Technology</h3>
+        <p><strong>QA Engineer Intern</strong> | Dublin, IE | June 2023 – September 2023</p>
+        <ul>
+          <li>Utilized Nightwatch and Node.js to streamline the translation of legacy Nightwatch tests, optimizing testing and debugging processes for data analytics applications.</li>
+          <li>Employed JavaScript and learned the company-developed language Q to conduct front-end testing on the KX vector database platform, enhancing the quality and reliability of the user interface.</li>
         </ul>
       </div>
-      <div class="box" style="margin-top: 10px; width=50%">
-        <h2 style="font-size: 1.5em;">Languages</h2>
-        <div class="language-proficiency">
-          <p><strong>Java</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 70%; background-color: #4a90e2;"></div></div>
-          <p><strong>Python</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 90%; background-color: #4a90e2;"></div></div>
-          <p><strong>SQL</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 60%; background-color: #4a90e2;"></div></div>
-          <p><strong>R</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 40%; background-color: #4a90e2;"></div></div>
-          <p><strong>JavaScript</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 50%; background-color: #4a90e2;"></div></div>
-          <p><strong>HTML/CSS</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 60%; background-color: #4a90e2;"></div></div>
-          <p><strong>C#</strong></p>
-          <div class="bar-container"><div class="bar" style="width: 50%; background-color: #4a90e2;"></div></div>
+      <div class="job">
+        <h3>Datairis - AI-Based Data Access Technology</h3>
+        <p><strong>Software Research Intern</strong> | Palo Alto, CA | June 2023 – August 2023</p>
+        <ul>
+          <li>Assessed the effectiveness of Large Language Models in translating diverse natural language queries into SQL using the TPC-DS dataset and Google’s BigQuery data warehouse.</li>
+          <li>Experimented with prompts of varying detail to evaluate AI-generated SQL queries and analyzed how LLMs translate natural language queries to code.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Pulsora - Solutions For ESG & Sustainability Performance</h3>
+        <p><strong>Software Engineer Intern</strong> | San Francisco, CA | June 2022 – September 2022</p>
+        <ul>
+          <li>Developed code for extracting data from customer files (CSV, Excel, JSON), enhancing data compatibility for the UI.</li>
+          <li>Played a key role in quality assurance by testing the UI platform with extracted data, ensuring robust functionality and accuracy in displaying calculated ESG metrics.</li>
+          <li>Facilitated communication with offshore team members by identifying and articulating key issues.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box fade-in section-panel" id="skills" style="width: 80%; background: linear-gradient(to bottom right, #4d4d4d, #3a3a78);">
+      <h2>Skills</h2>
+      <ul>
+        <li>Developer Tools: VS Code, Eclipse, Google Cloud Platform, Microsoft Office, APIs, Tableau</li>
+        <li>Technologies/Frameworks: Linux, GitHub, JUnit, Nightwatch, Node.js, Jupyter, Pandas, NumPy</li>
+        <li>CAD Software: Solidworks</li>
+      </ul>
+    </div>
+    <div class="box fade-in section-panel" id="education" style="width: 80%; background: linear-gradient(to bottom right, #4d4d4d, #3a3a78);">
+      <h2>Education</h2>
+      <p><strong>University of Wisconsin - Madison</strong></p>
+      <p>BS Information Science</p>
+      <p>Minor in Computer Science</p>
+    </div>
+    <div class="box fade-in section-panel" id="languages" style="width: 80%; background: linear-gradient(to bottom right, #4d4d4d, #3a3a78);">
+      <h2>Languages</h2>
+      <div class="language-skill">
+        <p>Java</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 70%; background-color: #6a5acd;"></div>
+        </div>
+      </div>
+      <div class="language-skill">
+        <p>Python</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 90%; background-color: #6a5acd;"></div>
+        </div>
+      </div>
+      <div class="language-skill">
+        <p>SQL</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 60%; background-color: #6a5acd;"></div>
+        </div>
+      </div>
+      <div class="language-skill">
+        <p>R</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 40%; background-color: #6a5acd;"></div>
+        </div>
+      </div>
+      <div class="language-skill">
+        <p>JavaScript</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 50%; background-color: #6a5acd;"></div>
+        </div>
+      </div>
+      <div class="language-skill">
+        <p>HTML/CSS</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 60%; background-color: #6a5acd;"></div>
+        </div>
+      </div>
+      <div class="language-skill">
+        <p>C#</p>
+        <div class="bar-container">
+          <div class="bar" style="width: 50%; background-color: #6a5acd;"></div>
         </div>
       </div>
     </div>
-    <div id="main-content" style="width: 70%; padding: 20px; display: flex; flex-direction: column; gap: 20px;">
-      <div class="box" id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm Akshay, a software engineer passionate about building creative solutions, whether they are web applications, machine learning models, or something entirely new! My journey began in Mechanical Engineering and pivoted into Computer Science, driven by my fascination with technology and its potential to impact the world.</p>
-      </div>
-      <div class="box section-panel" id="work-experience">
-        <h2>Work Experience</h2>
-        <div class="job">
-          <h3>KX - Vector Database & Analytics Engine Technology</h3>
-          <p><strong>QA Engineer Intern</strong> | Dublin, IE | June 2023 – September 2023</p>
-          <ul>
-            <li>Utilized Nightwatch and Node.js to streamline the translation of legacy Nightwatch tests, optimizing testing and debugging processes for data analytics applications.</li>
-            <li>Employed JavaScript and learned the company-developed language Q to conduct front-end testing on the KX vector database platform, enhancing the quality and reliability of the user interface.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Datairis - AI-Based Data Access Technology</h3>
-          <p><strong>Software Research Intern</strong> | Palo Alto, CA | June 2023 – August 2023</p>
-          <ul>
-            <li>Assessed the effectiveness of Large Language Models in translating diverse natural language queries into SQL using the TPC-DS dataset and Google’s BigQuery data warehouse.</li>
-            <li>Experimented with prompts of varying detail to evaluate AI-generated SQL queries and analyzed how LLMs translate natural language queries to code.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Pulsora - Solutions For ESG & Sustainability Performance</h3>
-          <p><strong>Software Engineer Intern</strong> | San Francisco, CA | June 2022 – September 2022</p>
-          <ul>
-            <li>Developed code for extracting data from customer files (CSV, Excel, JSON), enhancing data compatibility for the UI.</li>
-            <li>Played a key role in quality assurance by testing the UI platform with extracted data, ensuring robust functionality and accuracy in displaying calculated ESG metrics.</li>
-            <li>Facilitated communication with offshore team members by identifying and articulating key issues.</li>
-          </ul>
-        </div>
-      </div>
-      </div>
-      <div class="box section-panel" id="projects" style="margin-top: 20px;">
-        <h2>Projects</h2>
-        <div class="project-container" style="flex-direction: column; gap: 20px;">
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="writer.jpg" alt="AI Story Generator" class="project-image">
-            <div class="project">
-              <h3>AI Story Generator</h3>
-              <p>My passion for writing inspired me to create the AI Story Generator, merging my love for literature with technology. Using Flask and OpenAI’s GPT-3.5 API, I developed a web app that generates stories from user prompts, supported by a responsive HTML and CSS interface for accessibility.</p>
-              <p>This project sharpened my skills in API integration, web development, and secure coding, showcasing my drive to innovate at the intersection of creativity and technology.</p>
-              <p>Check out my book, <a style="color: #e0aaff;" href="https://www.amazon.com/Edge-Darkness-Collection-Short-Stories/dp/179098307X?crid=1MT402E97Q1NH&dib=eyJ2IjoiMSJ9.U3s-nJtimC5fXnOprtWQOw.ID4pl6sQhailkLfZxcUuQ8QtnJW1wWH3-udrc5_9eTA&dib_tag=se&keywords=akshay+gokhale+on+the+edge+of+darkness&qid=1732315062&sprefix=akshay+gokhale+on+the+edge+of+darkness%2Caps%2C155&sr=8-1" target="_blank">On the Edge of Darkness: A Collection of Short Stories</a>, for more of my storytelling passion.</p>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="cardio.jpg" alt="Cardiovascular Disease Prediction Model" class="project-image">
-            <div class="project">
-              <h3>Cardiovascular Disease Prediction Model</h3>
-              <p>This ongoing project aims to predict cardiovascular disease using a dataset with features like age, gender, blood pressure, cholesterol levels, BMI, and lifestyle habits. The model preprocesses data with imputation, scaling, and encoding while incorporating engineered features like age ranges by gender. Using a Random Forest classifier with hyperparameter tuning and class imbalance handling, the goal is to create a robust, balanced model to identify high-risk individuals. This work has the potential to aid in early diagnosis and optimize healthcare resources.</p>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="weather.jpg" alt="Weather App" class="project-image">
-            <div class="project">
-              <h3>Weather App</h3>
-              <p>The Weather App project was an opportunity for me to explore JavaFX and gain a deeper understanding of its tree-structured layout while experimenting with real-world data. Using the OpenWeatherMap API, I developed a Java application that retrieves real-time weather data and presents it through an intuitive, visually appealing interface.</p>
-              <p>This project not only strengthened my skills in API integration, data parsing, and GUI development but also provided valuable experience in combining functional automation with an engaging user experience.</p>
-            </div>
+    <div class="box fade-in section-panel" id="projects" style="width: 80%;">
+      <h2>Projects</h2>
+      <div class="project-container" style="flex-direction: column; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="writer.jpg" alt="AI Story Generator" class="project-image">
+          <div class="project">
+            <h3>AI Story Generator</h3>
+            <p>My passion for writing inspired me to create the AI Story Generator, merging my love for literature with technology. Using Flask and OpenAI’s GPT-3.5 API, I developed a web app that generates stories from user prompts, supported by a responsive HTML and CSS interface for accessibility.</p>
+            <p>This project sharpened my skills in API integration, web development, and secure coding, showcasing my drive to innovate at the intersection of creativity and technology.</p>
+            <p>Check out my book, <a style="color: #e0aaff;" href="https://www.amazon.com/Edge-Darkness-Collection-Short-Stories/dp/179098307X?crid=1MT402E97Q1NH&dib=eyJ2IjoiMSJ9.U3s-nJtimC5fXnOprtWQOw.ID4pl6sQhailkLfZxcUuQ8QtnJW1wWH3-udrc5_9eTA&dib_tag=se&keywords=akshay+gokhale+on+the+edge+of+darkness&qid=1732315062&sprefix=akshay+gokhale+on+the+edge+of+darkness%2Caps%2C155&sr=8-1" target="_blank">On the Edge of Darkness: A Collection of Short Stories</a>, for more of my storytelling passion.</p>
           </div>
         </div>
-      </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="cardio.jpg" alt="Cardiovascular Disease Prediction Model" class="project-image">
+          <div class="project">
+            <h3>Cardiovascular Disease Prediction Model</h3>
+            <p>This ongoing project aims to predict cardiovascular disease using a dataset with features like age, gender, blood pressure, cholesterol levels, BMI, and lifestyle habits. The model preprocesses data with imputation, scaling, and encoding while incorporating engineered features like age ranges by gender. Using a Random Forest classifier with hyperparameter tuning and class imbalance handling, the goal is to create a robust, balanced model to identify high-risk individuals. This work has the potential to aid in early diagnosis and optimize healthcare resources.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="weather.jpg" alt="Weather App" class="project-image">
+          <div class="project">
+            <h3>Weather App</h3>
+            <p>The Weather App project was an opportunity for me to explore JavaFX and gain a deeper understanding of its tree-structured layout while experimenting with real-world data. Using the OpenWeatherMap API, I developed a Java application that retrieves real-time weather data and presents it through an intuitive, visually appealing interface.</p>
+            <p>This project not only strengthened my skills in API integration, data parsing, and GUI development but also provided valuable experience in combining functional automation with an engaging user experience.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -231,6 +264,12 @@
   <footer>
     <div class="container">
       <p>&copy; 2024 Akshay Gokhale | All Rights Reserved</p>
+      <div class="contact-links">
+        <a href="https://github.com/akshaygokhale797" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/akshgokhale" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:akshaygokhale2001@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+      </div>
+      <p>Thank you for visiting my portfolio!</p>
     </div>
   </footer>
 </body>
